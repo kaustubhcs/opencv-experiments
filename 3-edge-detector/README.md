@@ -1,8 +1,8 @@
-#Sobel Edge Detector
+# Sobel Edge Detector
 
-##Author: Kaustubh Shivdikar
+## Author: Kaustubh Shivdikar
 
-###All Rights Reserved
+### All Rights Reserved
 
 To run the code simply type
 
