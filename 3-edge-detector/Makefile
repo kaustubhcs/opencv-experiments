@@ -45,7 +45,7 @@ src/$(TARGET).o: src/$(TARGET).cu
 	$(NVCC) $(NVCCFLAGS) -dc $< -o $@ $(GENCODE_FLAGS) 
 
 run: all
-	./$(TARGET) ~/Pictures/Webcam/1.jpg ./output_image.jpg && feh ./output_image && feh ~/Pictures/Webcam/1.jpg
+	./$(TARGET) ~/Pictures/Webcam/1.jpg ./output_image.jpg && feh ./output_image.jpg && feh ~/Pictures/Webcam/1.jpg
 
 clean:
 	$(RM) $(TARGET) src/*.o *.o *.tar* *.core* *out*.jpg *input*.jpg
