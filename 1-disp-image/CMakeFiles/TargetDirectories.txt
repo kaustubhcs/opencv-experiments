@@ -1,0 +1,3 @@
+/home/ktb/git/opencv-experiments/1-experiment/CMakeFiles/edit_cache.dir
+/home/ktb/git/opencv-experiments/1-experiment/CMakeFiles/rebuild_cache.dir
+/home/ktb/git/opencv-experiments/1-experiment/CMakeFiles/DisplayImage.dir
