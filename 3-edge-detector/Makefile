@@ -1,6 +1,7 @@
 # environment
 SM := 35
-
+INPUT_IMG=input_image.jpg
+OUTPUT_IMG=output_image.jpg
 GCC := g++
 NVCC := nvcc
 
@@ -45,7 +46,11 @@ src/$(TARGET).o: src/$(TARGET).cu
 	$(NVCC) $(NVCCFLAGS) -dc $< -o $@ $(GENCODE_FLAGS) 
 
 run: all
+	fswebcam -r 1920x1080 --jpeg 85 -D 1 ./$(INPUT_IMG) && sleep 4 && ./$(TARGET) ./$(INPUT_IMG) ./$(OUTPUT_IMG) && feh ./$(INPUT_IMG) && feh ./$(OUTPUT_IMG)
+
+run2: all
 	./$(TARGET) ~/Pictures/Webcam/1.jpg ./output_image.jpg && feh ./output_image.jpg & feh ~/Pictures/Webcam/1.jpg
+
 
 clean:
 	$(RM) $(TARGET) src/*.o *.o *.tar* *.core* *out*.jpg *input*.jpg
